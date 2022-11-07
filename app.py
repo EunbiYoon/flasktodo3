@@ -33,9 +33,9 @@ migrate = Migrate(app, db)
 # For schema changes, run "flask db migrate"
 from models import Restaurant, Review
 
-with app.app_context():
-    db.create_all()
-    db.session.commit()
+#with app.app_context():
+db.create_all()
+db.session.commit()
 
 @app.route('/', methods=['GET'])
 def index():
